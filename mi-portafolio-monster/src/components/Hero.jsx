@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+
 export default function Hero() {
   return (
     <motion.div
@@ -7,8 +8,16 @@ export default function Hero() {
       transition={{ duration: 0.7 }}
       className="d-flex flex-column justify-content-center align-items-center p-5"
     >
-      <h2 className="monster-green display-4">Tu Nombre</h2>
+      <h2 className="monster-green display-4">Marco Pastene Santander</h2>
       <p className="monster-green lead">Web Developer - Full Stack</p>
+      {/* Foto */}
+      <div className="my-4">
+        <img
+          src="mifoto.jpg"
+          alt="Marco Pastene"
+          className="profile-pic-monster"
+        />
+      </div>
       <button className="button-monster mt-3">Ver Proyectos</button>
     </motion.div>
   );
