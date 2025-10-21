@@ -56,3 +56,24 @@ body {
   transform: scale(1.04);
   box-shadow: 0 0 22px #39FF14;
 }
+
+.skill-chip-monster {
+  display: inline-flex;
+  align-items: center;
+  background: #191a1a;
+  color: #39FF14;
+  border: 1.5px solid #39FF14;
+  border-radius: 999px;
+  padding: 0.5em 1.1em;
+  font-weight: 600;
+  font-size: 1.13em;
+  box-shadow: 0 0 14px #39FF14, 0 0 2px #111;
+  margin-bottom: 0.5em;
+  transition: transform 0.15s, box-shadow 0.2s;
+  cursor: pointer;
+}
+.skill-chip-monster:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 32px #39FF14;
+  background: #232424;
+}
