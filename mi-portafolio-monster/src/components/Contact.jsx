@@ -1,3 +1,5 @@
+import { FaLinkedin, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
+
 export default function Contact() {
   return (
     <section className="container py-5" style={{ minHeight: "100vh", marginTop: "80px" }}>
@@ -19,13 +21,32 @@ export default function Contact() {
           <button type="submit" className="button-monster btn w-100 mt-3">Enviar</button>
         </form>
         <hr className="monster-green my-4" />
-        <div>
-          <span className="monster-green me-2">LinkedIn:</span>
-          <a href="https://www.linkedin.com/in/marcopastene/" className="monster-green" target="_blank" rel="noopener noreferrer">Tu perfil</a>
-        </div>
-        <div>
-          <span className="monster-green me-2">WhatsApp:</span>
-          <a href="https://wa.me/+56947142634" className="monster-green" target="_blank" rel="noopener noreferrer">Envíame un mensaje</a>
+        {/* Solo iconos, grandes y con animación Monster */}
+        <div className="d-flex gap-4 justify-content-center mt-3">
+          <a 
+            href="https://www.linkedin.com/in/marcopastene/" 
+            className="social-icon-monster"
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin size={38} />
+          </a>
+          <a 
+            href="https://wa.me/+56947142634"
+            className="social-icon-monster"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaWhatsapp size={38} />
+          </a>
+          <a 
+            href="mpastene1996@outlook.com"
+            className="social-icon-monster"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaEnvelope size={38} />
+          </a>
         </div>
       </div>
     </section>

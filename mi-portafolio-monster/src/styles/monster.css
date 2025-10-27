@@ -80,11 +80,13 @@ body::before {
   .navbar-hamburger {
     display: block;
   }
+  @media (max-width: 991px) {
   .navbar-menu {
     display: none !important;
     position: absolute;
     top: 62px;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
     background: #191a1ad9;
     flex-direction: column !important;
     gap: 1.5em !important;
@@ -93,20 +95,28 @@ body::before {
     box-shadow: -2px 8px 30px #222;
     border-radius: 0 0 20px 20px;
     z-index: 120;
+    align-items: center;        /* <--- CENTRA los links en el menú */
+    text-align: center;         /* <--- CENTRA el texto */
   }
   .navbar-menu.mobile-open {
     display: flex !important;
   }
+}
+
   .navbar-social {
-    position: fixed;
-    bottom: 12px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #111c;
-    padding: 0.8em 1.6em;
-    border-radius: 16px;
-    box-shadow: 0 0 16px #181f, 0 0 3px #181;
-    z-index: 99;
+    position: fixed !important;
+    left: 50% !important;
+    bottom: 12px !important;
+    transform: translateX(-50%) !important;
+    background: #111c !important;
+    padding: 0.8em 1.2em !important;
+    border-radius: 16px !important;
+    box-shadow: 0 0 16px #181f, 0 0 3px #181 !important;
+    z-index: 130 !important;
+    display: flex !important;
+    gap: 1.3em !important;
+    justify-content: center !important;     /* <--- CENTRA los íconos */
+    align-items: center !important;
   }
 }
 
@@ -134,11 +144,27 @@ body::before {
   border: 2px solid #39FF14;
 }
 
+.social-icon-monster {
+  color: #39FF14;
+  background: #191a1a;
+  border-radius: 50%;
+  padding: 0.32em;
+  box-shadow: 0 0 9px #39FF14, 0 0 1.5px #222;
+  transition: transform 0.18s, box-shadow 0.22s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #39FF14;
+  font-size: 2em;
+}
+
 .social-icon-monster:hover {
-  transform: scale(1.16);
+  transform: scale(1.18);
   box-shadow: 0 0 26px #39FF14;
   background: #232424;
+  color: #fff;
 }
+
 
 .hero-monster {
   background: linear-gradient(120deg, #111 70%, #232 100%);
@@ -148,6 +174,22 @@ body::before {
 .monster-green {
   color: #39FF14;
   text-shadow: 0 0 10px #39FF14, 0 0 25px #39FF14;
+}
+
+.display-name-hero {
+  font-size: 5em !important;
+  font-weight: bold !important;
+  color: #39FF14 !important;
+  text-shadow: 0 0 24px #39FF14, 0 0 7px #191 !important;
+  letter-spacing: 3px !important;
+  line-height: 1.05 !important;
+  margin-bottom: 0.2em !important;
+}
+@media (max-width: 700px) {
+  .display-name-hero {
+    font-size: 2em !important;
+    letter-spacing: 1px !important;
+  }
 }
 
 .button-monster {
