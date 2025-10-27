@@ -1,11 +1,33 @@
 body {
+  color: #F5F5F5; 
   min-height: 100vh;
-  background: #000;
-  color: #F5F5F5;
-  margin: 0;
-  padding: 0;
+  background: #060606;         /* Fondo negro Monster */
+  position: relative;
   overflow-x: hidden;
+  
 }
+
+/* Estrellas sutiles en Monster Energy */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: 
+    radial-gradient(circle, #39FF1466 1px, transparent 1.1px) repeat,
+    radial-gradient(circle, #fff 0.6px, transparent 1.1px) repeat;
+  background-size: 1.7vw 1.7vw, 1vw 1vw;
+  opacity: 0.13;
+  z-index: 0;
+  pointer-events: none;
+  animation: moveStars 70s linear infinite;
+}
+
+@keyframes moveStars {
+  from {background-position: 0 0, 0 0;}
+  to   {background-position: 55vw 45vh, 16vw 21vh;}
+}
+
+
 .navbar-monster {
   background: rgba(20, 20, 20, 0.87);
   box-shadow: 0 0 15px #39FF14, 0 0 1px #111;
@@ -159,18 +181,49 @@ body {
 
 .project-img-monster {
   width: 100%;
-  height: 180px;
+  height: 170px;
   object-fit: cover;
   border-radius: 14px;
   border: 2px solid #39FF14;
   box-shadow: 0 0 8px #39FF14;
   background: #111;
-  transition: transform 0.25s, box-shadow 0.25s;
+  transition: transform 0.18s, box-shadow 0.22s;
+  display: block;
+}
+.project-img-monster:hover, .project-img-monster:focus {
+  transform: scale(1.04);
+  box-shadow: 0 0 30px #39FF14;
 }
 
-.project-img-monster:hover {
-  transform: scale(1.04);
-  box-shadow: 0 0 22px #39FF14;
+.monster-green-border {
+  border: 2px solid #39FF14;
+  box-shadow: 0 0 12px #39FF14;
+}
+.button-monster {
+  background: #232424;
+  color: #39FF14;
+  border: 2px solid #39FF14;
+  border-radius: 1.8em;
+  font-weight: bold;
+  box-shadow: 0 0 10px #39FF14;
+  transition: box-shadow 0.28s, transform 0.19s;
+  padding: 0.6em 2em;
+  letter-spacing: 0.8px;
+}
+.button-monster:hover {
+  background: #262f26;
+  color: #fff;
+  box-shadow: 0 0 35px #39FF14;
+  transform: scale(1.06);
+}
+@media (max-width: 700px) {
+  .project-img-monster {
+    height: 110px;
+    border-radius: 9px;
+  }
+  .monster-green-border {
+    padding: 1em !important;
+  }
 }
 
 .about-panel {
