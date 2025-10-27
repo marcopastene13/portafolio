@@ -113,37 +113,32 @@ export default function About() {
         </div>
       </motion.div>
       <h4 className="monster-green mt-5 mb-3">Certificaciones</h4>
-      <div className="row">
-        {certifications.map((cert) => (
-          <motion.div
-            key={cert.nombre}
-            className="col-12 col-md-6 col-lg-4 mb-4"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1, duration: 0.75 }}
+      <div className="row justify-content-center">
+        {certifications.map((cert, idx) => (
+          <div
+            key={cert.nombre + idx}
+            className="col-12 col-md-10 d-flex flex-column align-items-center"
           >
-            <a
-              href={cert.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cert-card-monster d-block p-0"
-            >
-              <div className="cert-img-wrap text-center pt-3">
+            <div className="cert-card-monster monster-glow mb-5">
+              <div className="cert-img-wrap mb-2 mt-3">
                 <img
                   src={cert.img}
                   alt={cert.entidad}
-                  className="cert-card-img mb-3"
+                  className="cert-card-img"
                 />
               </div>
-              <div className="px-4 pb-3">
-                <strong className="monster-green d-block fs-5 mb-1">
-                  {cert.nombre}
-                </strong>
-                <span className="d-block mb-1">{cert.entidad}</span>
-                <span className="cert-date">{cert.fecha}</span>
-              </div>
-            </a>
-          </motion.div>
+              <h3 className="monster-green mt-2 mb-0">{cert.nombre}</h3>
+              <a
+                href={cert.url}
+                className="monster-green d-block mb-0"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {cert.entidad}
+              </a>
+              <span className="cert-date mb-3">{cert.fecha}</span>
+            </div>
+          </div>
         ))}
       </div>
     </section>
