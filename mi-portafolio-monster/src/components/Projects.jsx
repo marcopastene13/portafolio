@@ -12,7 +12,7 @@ const proyectos = [
 
 export default function Projects() {
   return (
-    <section className="container py-5">
+    <section className="container py-5" style={{ minHeight: "100vh", marginTop: "80px"}}>
       <h2 className="monster-green mb-4">Proyectos</h2>
       <div className="row">
         {proyectos.map((proy, idx) => (

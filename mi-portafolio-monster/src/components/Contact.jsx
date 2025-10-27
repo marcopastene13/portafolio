@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <section className="container py-5">
+    <section className="container py-5" style={{ minHeight: "100vh", marginTop: "80px" }}>
       <h2 className="monster-green mb-4">Contacto</h2>
       <div className="bg-dark p-4 rounded shadow">
         <form>
