@@ -79,7 +79,7 @@ export default function About() {
       >
         <img
           src="/mifoto.jpg"
-          alt="Marco Pasten"
+          alt="Marco Pastene"
           className="profile-pic-monster"
         />
         </motion.div>
