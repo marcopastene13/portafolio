@@ -19,7 +19,7 @@ export default function Hero() {
       >
         <img
           src="logo.png"
-          alt="Tu nombre"
+          alt="Tu nombr"
           className="profile-pic-monster"
         />
       </motion.div>
