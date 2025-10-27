@@ -18,7 +18,7 @@ export default function Hero() {
         className="my-4"
       >
         <img
-          src="mifoto.jpg"
+          src="logo.png"
           alt="Tu nombre"
           className="profile-pic-monster"
         />
@@ -36,7 +36,7 @@ export default function Hero() {
         animate={{ opacity: 1, scale: 1.13 }}
         transition={{ delay: 1.15, duration: 0.7 }}
       >
-        <a href="#projects" className="button-monster btn btn-lg mt-3">Ver Proyectos</a>
+        <a href="projects" className="button-monster btn btn-lg mt-3">Ver Proyectos</a>
       </motion.div>
     </section>
   );

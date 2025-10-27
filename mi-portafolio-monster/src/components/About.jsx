@@ -71,6 +71,19 @@ export default function About() {
       >
         Sobre mí
       </motion.h2>
+      <div className="d-flex justify-content-center mb-3">
+        <motion.div
+        initial={{ opacity: 0, scale: 0.93 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.18, duration: 0.7 }}
+      >
+        <img
+          src="/mifoto.jpg"
+          alt="Marco Pastene"
+          className="profile-pic-monster"
+        />
+        </motion.div>
+      </div>
       <motion.div
         initial={{ opacity: 0, scale: 0.93 }}
         animate={{ opacity: 1, scale: 1 }}

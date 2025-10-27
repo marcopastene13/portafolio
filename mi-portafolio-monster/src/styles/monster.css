@@ -1,13 +1,11 @@
 body {
-  color: #F5F5F5; 
+  color: #F5F5F5;
   min-height: 100vh;
-  background: #060606;         /* Fondo negro Monster */
+  background: #060606;
   position: relative;
   overflow-x: hidden;
-  
 }
 
-/* Estrellas sutiles en Monster Energy */
 body::before {
   content: '';
   position: fixed;
@@ -27,7 +25,7 @@ body::before {
   to   {background-position: 55vw 45vh, 16vw 21vh;}
 }
 
-
+/* NAVBAR */
 .navbar-monster {
   background: rgba(20, 20, 20, 0.87);
   box-shadow: 0 0 15px #39FF14, 0 0 1px #111;
@@ -35,18 +33,34 @@ body::before {
   z-index: 100;
   width: 100vw;
   min-height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 0;
 }
-
 .navbar-logo {
-  letter-spacing: 2px;
-  text-shadow: 0 0 8px #39FF14, 0 0 2px #222;
+  display: flex;
+  align-items: center;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
-
+.navbar-logo img {
+  height: 44px;
+  width: auto;
+  border-radius: 10px;
+  background: transparent;
+  box-shadow: 0 0 14px #39FF14, 0 0 6px #111;
+  transition: transform 0.18s;
+  margin-left: 0 !important;
+}
+.navbar-logo img:hover {
+  transform: scale(1.12);
+  box-shadow: 0 0 30px #39FF14;
+}
 .navbar-menu {
   font-size: 1.15em;
   transition: all 0.22s;
 }
-
 .navbar-link-monster {
   color: #39FF14;
   font-weight: 600;
@@ -58,7 +72,6 @@ body::before {
   box-shadow: none;
   display: inline-block;
 }
-
 .navbar-link-monster.active,
 .navbar-link-monster:hover {
   background: #181818;
@@ -66,7 +79,6 @@ body::before {
   color: #fff;
   transform: scale(1.07);
 }
-
 .navbar-hamburger {
   border: none;
   background: transparent;
@@ -75,75 +87,7 @@ body::before {
   margin-left: 1em;
   cursor: pointer;
 }
-
-@media (max-width: 991px) {
-  .navbar-hamburger {
-    display: block;
-  }
-  @media (max-width: 991px) {
-  .navbar-menu {
-    display: none !important;
-    position: absolute;
-    top: 62px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #191a1ad9;
-    flex-direction: column !important;
-    gap: 1.5em !important;
-    width: 85vw;
-    padding: 2em 1.5em 1.5em 1em;
-    box-shadow: -2px 8px 30px #222;
-    border-radius: 0 0 20px 20px;
-    z-index: 120;
-    align-items: center;        /* <--- CENTRA los links en el menú */
-    text-align: center;         /* <--- CENTRA el texto */
-  }
-  .navbar-menu.mobile-open {
-    display: flex !important;
-  }
-}
-
-  .navbar-social {
-    position: fixed !important;
-    left: 50% !important;
-    bottom: 12px !important;
-    transform: translateX(-50%) !important;
-    background: #111c !important;
-    padding: 0.8em 1.2em !important;
-    border-radius: 16px !important;
-    box-shadow: 0 0 16px #181f, 0 0 3px #181 !important;
-    z-index: 130 !important;
-    display: flex !important;
-    gap: 1.3em !important;
-    justify-content: center !important;     /* <--- CENTRA los íconos */
-    align-items: center !important;
-  }
-}
-
-@media (max-width: 600px) {
-  .navbar-monster {
-    flex-direction: column;
-    padding: 1em 0.3em;
-    font-size: 15.5px;
-  }
-  .monster-logo {
-    font-size: 1.15em;
-  }
-}
-
-.navbar-social .social-icon-monster {
-  color: #39FF14;
-  background: #191a1a;
-  border-radius: 50%;
-  padding: 0.32em;
-  box-shadow: 0 0 8px #39FF14, 0 0 1.5px #222;
-  transition: transform 0.18s, box-shadow 0.2s;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid #39FF14;
-}
-
+.navbar-social .social-icon-monster,
 .social-icon-monster {
   color: #39FF14;
   background: #191a1a;
@@ -157,7 +101,6 @@ body::before {
   border: 2px solid #39FF14;
   font-size: 2em;
 }
-
 .social-icon-monster:hover {
   transform: scale(1.18);
   box-shadow: 0 0 26px #39FF14;
@@ -165,17 +108,11 @@ body::before {
   color: #fff;
 }
 
-
+/* HERO */
 .hero-monster {
   background: linear-gradient(120deg, #111 70%, #232 100%);
   min-height: 100vh;
 }
-
-.monster-green {
-  color: #39FF14;
-  text-shadow: 0 0 10px #39FF14, 0 0 25px #39FF14;
-}
-
 .display-name-hero {
   font-size: 5em !important;
   font-weight: bold !important;
@@ -185,62 +122,12 @@ body::before {
   line-height: 1.05 !important;
   margin-bottom: 0.2em !important;
 }
-@media (max-width: 700px) {
-  .display-name-hero {
-    font-size: 2em !important;
-    letter-spacing: 1px !important;
-  }
-}
-
-.button-monster {
-  background: #222;
+.monster-green {
   color: #39FF14;
-  border: 2px solid #39FF14;
-  box-shadow: 0 0 10px #39FF14;
-  transition: box-shadow 0.3s;
+  text-shadow: 0 0 10px #39FF14, 0 0 25px #39FF14;
 }
 
-.button-monster:hover {
-  box-shadow: 0 0 30px #39FF14;
-  background: #111;
-}
-
-.monster-green-border {
-  border: 2px solid #39FF14;
-  box-shadow: 0 0 15px #39FF14;
-}
-
-.profile-pic-monster {
-  width: 155px;
-  height: 155px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #39FF14;
-  box-shadow: 0 0 34px #39FF14, 0 0 15px #191;
-  background: #181818;
-  transition: box-shadow 0.25s, transform 0.21s;
-}
-
-.project-img-monster {
-  width: 100%;
-  height: 170px;
-  object-fit: cover;
-  border-radius: 14px;
-  border: 2px solid #39FF14;
-  box-shadow: 0 0 8px #39FF14;
-  background: #111;
-  transition: transform 0.18s, box-shadow 0.22s;
-  display: block;
-}
-.project-img-monster:hover, .project-img-monster:focus {
-  transform: scale(1.04);
-  box-shadow: 0 0 30px #39FF14;
-}
-
-.monster-green-border {
-  border: 2px solid #39FF14;
-  box-shadow: 0 0 12px #39FF14;
-}
+/* BUTTONS */
 .button-monster {
   background: #232424;
   color: #39FF14;
@@ -258,46 +145,29 @@ body::before {
   box-shadow: 0 0 35px #39FF14;
   transform: scale(1.06);
 }
-@media (max-width: 700px) {
-  .project-img-monster {
-    height: 110px;
-    border-radius: 9px;
-  }
-  .monster-green-border {
-    padding: 1em !important;
-  }
+
+/* PROJECTS y CARDS */
+.project-img-monster {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 2px solid #39FF14;
+  box-shadow: 0 0 8px #39FF14;
+  background: #111;
+  transition: transform 0.18s, box-shadow 0.22s;
+  display: block;
+}
+.project-img-monster:hover, .project-img-monster:focus {
+  transform: scale(1.04);
+  box-shadow: 0 0 30px #39FF14;
+}
+.monster-green-border {
+  border: 2px solid #39FF14;
+  box-shadow: 0 0 12px #39FF14;
 }
 
-.about-panel {
-  max-width: 15000px;
-  margin: 0 auto;
-  background: rgba(33,33,33,0.95);
-}
-.skill-chip-monster {
-  display: inline-flex;
-  align-items: center;
-  background: #191a1a;
-  color: #39FF14;
-  border: 1.5px solid #39FF14;
-  border-radius: 999px;
-  padding: 0.5em 1.1em;
-  font-weight: 600;
-  font-size: 1.13em;
-  box-shadow: 0 0 14px #39FF14, 0 0 2px #111;
-  margin-bottom: 0.5em;
-  transition: transform 0.15s, box-shadow 0.2s;
-  cursor: pointer;
-}
-.skill-chip-monster:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 26px #39FF14;
-  background: #232424;
-}
-.monster-green-fw {
-  color: #39FF14;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
+/* CERTIFICATE CARDS */
 .cert-card-monster {
   background: #191a1a;
   border: 3px solid #39FF14;
@@ -340,13 +210,6 @@ body::before {
   box-shadow: 0 0 32px #39FF14, 0 0 8px #222;
   display: block;
 }
-.monster-green {
-  color: #39FF14;
-  text-shadow: 0 0 12px #39FF14;
-  font-weight: bold;
-  font-size: 1.3em;
-  letter-spacing: 1.5px;
-}
 .cert-date {
   color: #bbb;
   font-size: 1.1em;
@@ -355,8 +218,101 @@ body::before {
   display: block;
 }
 
-/* Tablet y mobile ADAPTABLE */
+/* PANEL & SKILLS */
+.about-panel {
+  max-width: 15000px;
+  margin: 0 auto;
+  background: rgba(33,33,33,0.95);
+}
+.skill-chip-monster {
+  display: inline-flex;
+  align-items: center;
+  background: #191a1a;
+  color: #39FF14;
+  border: 1.5px solid #39FF14;
+  border-radius: 999px;
+  padding: 0.5em 1.1em;
+  font-weight: 600;
+  font-size: 1.13em;
+  box-shadow: 0 0 14px #39FF14, 0 0 2px #111;
+  margin-bottom: 0.5em;
+  transition: transform 0.15s, box-shadow 0.2s;
+  cursor: pointer;
+}
+.skill-chip-monster:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 26px #39FF14;
+  background: #232424;
+}
+.profile-pic-monster {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #39FF14;
+  box-shadow: 0 0 34px #39FF14, 0 0 15px #191;
+  background: #181818;
+  transition: box-shadow 0.25s, transform 0.21s;
+  margin-bottom: 0.7em;
+}
+
+
+.monster-green-fw {
+  color: #39FF14;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* ADAPTABLE - RESPONSIVE */
 @media (max-width: 991px) {
+  .navbar-monster {
+    justify-content: flex-start !important;
+    padding-left: 0 !important;
+  }
+  .navbar-logo {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .navbar-logo img {
+    height: 35px;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .navbar-menu {
+    display: none !important;
+    position: absolute;
+    top: 62px;
+    left: 0;
+    width: 100vw;
+    transform: none;
+    background: #191a1ad9;
+    flex-direction: column !important;
+    gap: 1.5em !important;
+    padding: 2em 1.5em 1.5em 1em;
+    box-shadow: -2px 8px 30px #222;
+    border-radius: 0 0 20px 20px;
+    z-index: 120;
+    align-items: center;
+    text-align: center;
+  }
+  .navbar-menu.mobile-open {
+    display: flex !important;
+  }
+  .navbar-social {
+    position: fixed !important;
+    left: 50% !important;
+    bottom: 12px !important;
+    transform: translateX(-50%) !important;
+    background: #111c !important;
+    padding: 0.8em 1.2em !important;
+    border-radius: 16px !important;
+    box-shadow: 0 0 16px #181f, 0 0 3px #181 !important;
+    z-index: 130 !important;
+    display: flex !important;
+    gap: 1.3em !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
   .cert-card-monster {
     max-width: 98vw;
     padding: 0.8em 0.6em 0.4em 0.6em;
@@ -370,9 +326,24 @@ body::before {
   .monster-green {
     font-size: 1em;
   }
+  .container, .about-panel, .cert-card-monster {
+    padding-left: 0.4em !important;
+    padding-right: 0.4em !important;
+  }
 }
 
 @media (max-width: 700px) {
+  .display-name-hero {
+    font-size: 2em !important;
+    letter-spacing: 1px !important;
+  }
+  .project-img-monster {
+    height: 110px;
+    border-radius: 9px;
+  }
+  .monster-green-border {
+    padding: 1em !important;
+  }
   .about-panel {
     padding: 1.1em;
   }
@@ -382,4 +353,33 @@ body::before {
   }
 }
 
+.navbar-hamburger {
+  border: none;
+  background: transparent;
+  color: #39FF14;
+  display: none;
+  margin-left: 1em;
+  cursor: pointer;
+  font-size: 2em;
+  z-index: 200;
+}
+
+/* Mobile: hamburger visible y a la derecha */
+@media (max-width: 991px) {
+  .navbar-hamburger {
+    display: block;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    margin-left: 0;
+  }
+  .navbar-monster {
+    position: relative;
+    flex-direction: row;
+    justify-content: flex-start !important;
+    align-items: center;
+    padding-left: 0 !important;
+    min-height: 62px;
+  }
+}
 
